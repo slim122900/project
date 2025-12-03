@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    z-index: 500;
+    color: white;
+    
+}
+.left-group{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.left-group img {
+
+    padding: 20px;
+width: 140px;
+}
+
+.menu-icon {
+    font-size: 32px;
+   cursor: pointer;
+}
+
+.right-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.phone {
+    font-size: 18px;
+}
+
+.reservation-btn {
+    border: 2px solid white;
+    padding: 10px 26px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.reservation-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.dining{
+     height: 100vh;
+    background: url("asset/wooden.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(90%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    height: 100vh;
+    z-index: 1;
+
+}
+.s-dining{
+      text-align: center;
+      padding-left: 500px;
+    position: relative;
+    z-index: 5;
+  
+}
+.s-dining h1{
+    font-size: 6.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+    font-weight: 700;
+    opacity: 0.9;
+}
+.s-dining p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.dining::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(2px);
+    z-index:1;
+   
+}
+
+
+.story-section {
+    padding: 80px 0;
+    background: #f7f6f3; /* very light beige like the image */
+}
+
+.story-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h2 {
+    font-size: 54px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    width: 90%;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #6e6e6e;
+}
+
+.story-image {
+    flex: 1;
+    position: relative;
+}
+
+.story-img {
+    width: 100%;
+    display: block;
+     filter: brightness(50%);
+    
+}
+.story-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    z-index:1;
+   
+}
+
+/* Tomato illustration overlay */
+.tomato-icon {
+    position: absolute;
+    top: -40px;
+    left: -135px;
+    width: 150px;
+    opacity: 0.6;
+}
+
+
+
+ /* Section wrapper */
+  .team-section{
+    padding: 80px 20px 120px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .team-container{
+    width:100%;
+    max-width:var(--container-w);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--accent-gap);
+    align-items:start; /* top-align both columns */
+  }
+
+  /* Shared card styles */
+  .team-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center; /* center titles and images horizontally inside each column */
+  }
+
+  /* Left column specifics */
+  .card-left .team-title{
+    font-size:42px;            /* large title like your screenshot */
+    font-weight:700;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.6px;
+    text-align:center;
+  }
+  .card-left .team-sub{
+    margin:0 0 20px 0;
+    font-size:13px;
+    color:var(--muted);
+    text-align:center;
+  }
+  .card-left .team-img{
+    width:420px;               /* big portrait on the left */
+    max-width:100%;
+    height:auto;
+    display:block;
+    border-radius:3px;
+  }
+  .card-left .team-desc{
+    margin-top:26px;
+    width:88%;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+    text-align:center;
+  }
+
+  /* Right column specifics */
+  .card-right{
+    /* keep this column centered content-wise */
+  }
+  .card-right .team-title{
+    font-size:38px;
+    font-weight:700;
+    margin: 0 0 6px 0;
+    text-align:center;
+  }
+  .card-right .team-sub{
+    margin:0 0 18px 0;
+    font-size:12px;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  /* Chef image intentionally smaller and pushed downward to match the visual in your screenshot */
+  .card-right .team-img{
+    width:360px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    border-radius:3px;
+    margin-top:46px; /* pushes the chef image lower so titles sit higher */
+  }
+
+  .card-right .team-desc{
+    margin-top:28px;
+    width:95%;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+    text-align:center;
+  }
+
+
+  /* Push the entire right card downward */
+.card-right {
+    margin-top: 80px; /* adjust until perfect */
+}
+
+
+/* LEFT IMAGE + TEXT BESIDE EACH OTHER */
+.left-img{
+    display: flex;
+    align-items: flex-start; /* aligns text to top edge of image */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.left-img .team-img {
+    width: 320px;  /* adjust as needed */
+    border-radius: 4px;
+}
+
+.left-img .team-desc {
+    width: 260px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 0;   /* ensures it stays at the TOP */
+    color: #6e6e6e;
+}
+  
+
+/* reservation section */
+.reservation-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: rgb(203, 226, 203);
+}
+
+.reservation-section h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* FORM LAYOUT */
+.reservation-form {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* INPUT / SELECT BOXES */
+.input-box,
+.select-box select {
+    width: 220px;
+    padding: 14px 18px;
+    font-size: 15px;
+    border: 1px solid #999;
+    background: transparent;
+    appearance: none;
+    outline: none;
+}
+
+.select-box {
+    position: relative;
+}
+
+.select-box::after {
+    content: "▼";
+    font-size: 12px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    pointer-events: none;
+}
+
+/* BUTTON */
+.reserve-btn1 {
+    background: #1c1f1a;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: rgba(35, 48, 0, 0.8);
+    color: #fff;
+    padding: 70px 5% 40px;
+    font-family: "Inter", sans-serif;
+}
+
+/* TOP CONTENT LAYOUT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+/* LOGO */
+.footer-logo h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* CONTACT */
+.footer-contact h3,
+.footer-newsletter h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* NEWSLETTER SECTION */
+.footer-newsletter {
+    max-width: 380px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin: 10px 0 6px;
+}
+
+.newsletter-form input {
+    width: 230px;
+    padding: 12px;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #bbb;
+    color: #fff;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: #a2a93c;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.note {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* DIVIDER LINE */
+.footer-divider {
+    height: 1px;
+    background: #555;
+    margin: 25px 0;
+    opacity: 0.4;
+     border-bottom: 2px dotted #fff;
+}
+
+/* BOTTOM SECTION */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* SOCIAL ICONS (you can replace with real icons later) */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .icon {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+}

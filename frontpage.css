@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    color: white;
+    background-image: url(asset/bac.jpg);
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    z-index: 500;
+    
+}
+.left-group{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-box {
+    border: 2px solid white;
+    padding: 8px 16px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 32px;
+   cursor: pointer;
+}
+
+.right-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.phone {
+    font-size: 18px;
+}
+
+.reservation-btn {
+    border: 2px solid white;
+    padding: 10px 26px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.reservation-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* hero */
+.hero{
+  min-height: 72vh;
+  height: calc(100vh - 120px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background: var(--overlay);
+  mix-blend-mode: multiply;
+  z-index:1;
+}
+
+/* main content container */
+.hero-inner{
+  z-index: 3;
+  text-align:center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 30px 24px;
+  margin: 0 20px;
+  color: var(--accent);
+  margin-top: 80px;
+}
+
+/* Title */
+.big-title{
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: 6px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  color: var(--accent);
+  align-items: center;
+}
+
+/* dotted divider */
+.dotted-hr{
+  width: 60%;
+  margin: 0 auto 28px auto;
+  border-bottom: 3px dotted rgba(255,255,255,0.22);
+}
+
+/* countdown */
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap: 36px;
+  align-items:flex-end;
+  margin-bottom: 28px;
+  flex-wrap:wrap;
+  
+}
+.count-item{
+  text-align:center;
+  min-width:64px;
+}
+.count-number{
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.count-label{
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  margin-top:6px;
+  text-transform: capitalize;
+}
+
+/* View Menu button */
+.view-menu-bnt{
+  margin-top: 8px;
+  display: inline-flex;
+  padding: 12px 26px;
+  border: 2px solid rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight:600;
+  font-size: 18px;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+/* bottom dark band like screenshot */
+.page-footer{
+  height: 28vh;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.95));
+}
+
+/* ------------------------- */
+/*      RESPONSIVE DESIGN     */
+/* ------------------------- */
+
+/* --------- TABLETS LARGE (<=1024px) --------- */
+@media (max-width: 1024px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 20px 40px;
+    }
+
+    .left-group img {
+        width: 120px;
+    }
+
+    .big-title {
+        font-size: clamp(36px, 6vw, 60px);
+    }
+
+    .count-number {
+        font-size: clamp(24px, 5vw, 40px);
+    }
+
+    .view-menu-bnt {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
+
+    .hero-inner {
+        max-width: 800px;
+        padding: 20px;
+    }
+}
+
+/* --------- TABLETS SMALL (<=768px) --------- */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .right-info {
+        gap: 20px;
+    }
+
+    .phone {
+        display: none; /* hide phone on smaller screens */
+    }
+
+    /* HERO */
+    .hero-inner {
+        max-width: 90%;
+        padding: 16px;
+        margin-top: 50px;
+    }
+
+    .big-title {
+        font-size: clamp(28px, 8vw, 48px);
+        letter-spacing: 4px;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .count-number {
+        font-size: clamp(20px, 8vw, 36px);
+    }
+
+    .view-menu-bnt {
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+        padding: 12px 0;
+    }
+}
+
+/* --------- MOBILE (<=480px) --------- */
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-icon {
+        font-size: 28px;
+    }
+
+    /* HERO */
+    .hero-inner {
+        margin-top: 40px;
+        padding: 12px;
+    }
+
+    .big-title {
+        font-size: clamp(24px, 12vw, 36px);
+        letter-spacing: 2px;
+    }
+
+    .countdown {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .count-number {
+        font-size: clamp(18px, 10vw, 28px);
+    }
+
+    .view-menu-bnt {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    .page-footer {
+        height: 20vh;
+    }
+}

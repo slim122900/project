@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    color: white;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    z-index: 500;
+    
+}
+.left-group{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.left-group img{
+       padding: 20px;
+width: 140px;
+}
+
+.logo-box {
+    border: 2px solid white;
+    padding: 8px 16px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 32px;
+   cursor: pointer;
+}
+
+.right-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.phone {
+    font-size: 18px;
+}
+
+.reservation-btn {
+    border: 2px solid white;
+    padding: 10px 26px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.reservation-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------------- HERO SECTION ---------------- */
+
+.hero {
+    height: 100vh;
+    background: url("asset/contact.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(92%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* blur overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    z-index:1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 5;
+}
+
+.hero-content h1 {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+/* ---------------- OPEN TIME SECTION ---------------- */
+
+.open-time1 {
+    position: absolute;
+    right: 60px;
+    top: 400px;
+    text-align: right;
+    z-index: 10;
+    width: fit-content;
+}
+.open-time1-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open-time1 h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.days {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+.divider {
+    margin: 20px 0;
+    border-bottom: 1px dashed white;
+    width: 450px;
+}
+
+.time-list {
+    display: flex;
+    gap: 60px;
+}
+
+.time-list .box h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.time-list .box p {
+    font-size: 17px;
+}
+
+/* middle section */
+
+.contact-section {
+    width: 100%;
+    padding: 120px 120px;
+    background: #f7f7f2;
+    font-family: serif;
+    color: #333;
+}
+
+/* ------ ROW LAYOUT ------ */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+/* ------ IMAGES ------ */
+.contact-img {
+    width: 460px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ------ TEXT CONTENT ------ */
+.contact-text {
+    width: 40%;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.contact-text.right {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.contact-text.left {
+    text-align: left;
+    padding-right: 40px;
+}
+
+/* Highlighted text (green) */
+.highlight {
+    color: #8fa347;
+    font-weight: 600;
+}
+
+/* ------ BUTTON ------ */
+.map-btn {
+    margin-top: 18px;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background: #e8e8e8;
+}
+
+
+/* second section */
+
+
+.reservation-section {
+    width: 100%;
+    padding: 120px 200px;
+    background: #f7f7f2;
+    font-family: serif;
+    color: #333;
+    position: relative;
+    background-color: rgb(194, 222, 194);
+}
+
+/* ---------- Heading ---------- */
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+.reservation-header img{
+    width: 180px;
+    position: absolute;
+    left: -0.5%;
+    right: -20%;
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+.leaf-bg {
+    position: absolute;
+    width: 240px;
+    opacity: 0.35;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.reservation-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.sub {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------- FORM ---------- */
+
+.reservation-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.reservation-form input,
+.reservation-form select {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #555;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.double {
+    display: flex;
+    gap: 20px;
+}
+
+.double input,
+.double select {
+    width: 50%;
+}
+
+/* ---------- BUTTON ---------- */
+
+.reserve-btn {
+    width: 180px;
+    padding: 15px 0;
+    margin: 30px auto 0;
+    background: #7e8a32;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.reserve-btn:hover {
+    background: #6f792b;
+}
+
+.footer {
+    background-color: rgba(35, 48, 0, 0.8);
+    color: #fff;
+    padding: 70px 5% 40px;
+    font-family: "Inter", sans-serif;
+}
+
+/* TOP CONTENT LAYOUT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+/* LOGO */
+.footer-logo h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* CONTACT */
+.footer-contact h3,
+.footer-newsletter h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* NEWSLETTER SECTION */
+.footer-newsletter {
+    max-width: 380px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin: 10px 0 6px;
+}
+
+.newsletter-form input {
+    width: 230px;
+    padding: 12px;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #bbb;
+    color: #fff;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: #a2a93c;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.note {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* DIVIDER LINE */
+.footer-divider {
+    height: 1px;
+    background: #555;
+    margin: 25px 0;
+    opacity: 0.4;
+     border-bottom: 2px dotted #fff;
+}
+
+/* BOTTOM SECTION */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* SOCIAL ICONS (you can replace with real icons later) */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .icon {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* ------------------------- */
+/*      RESPONSIVENESS       */
+/* ------------------------- */
+
+/* ---------- LARGE TABLETS ---------- */
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .open-time1 {
+        right: 30px;
+        top: 350px;
+    }
+
+    .contact-section,
+    .reservation-section {
+        padding: 80px 60px;
+    }
+
+    .row {
+        gap: 40px;
+    }
+
+    .contact-img {
+        width: 360px;
+    }
+}
+
+/* ---------- TABLETS ---------- */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .left-group img {
+        width: 110px;
+    }
+
+    .phone {
+        display: none; /* hide phone number for smaller screens */
+    }
+
+    /* HERO */
+    .hero {
+        padding-left: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .open-time1 {
+        position: static;
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    .divider {
+        width: 100%;
+    }
+
+    .time-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* CONTACT SECTION */
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-text {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .contact-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* RESERVATION SECTION */
+    .reservation-section {
+        padding: 70px 40px;
+    }
+
+    .double {
+        flex-direction: column;
+    }
+
+    .double input,
+    .double select {
+        width: 100%;
+    }
+
+    .reserve-btn {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-icon {
+        font-size: 26px;
+    }
+
+    /* HERO */
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section,
+    .reservation-section {
+        padding: 60px 20px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 50px 20px;
+    }
+}

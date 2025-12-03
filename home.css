@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+.food{
     font-family: 'Georgia', sans-serif;
     color: #fff;
     background:url('asset/first.jpg') center/cover no-repeat;
@@ -13,12 +13,27 @@ body{
     justify-content: space-between;
     padding: 0 80px;
     background-position: center;
+    position: relative;
+    width: 100%;
+    
 }
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 48, 0, 0.8);
+    z-index: 1;
+}
+
 .container{
     width:100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    z-index: 2;
 }
 .sidebar{
     color: white;
@@ -44,6 +59,7 @@ body{
     transition: 0.3s none;
     padding: 10px 0;
     display: block;
+    cursor: pointer;
 }
 .sidebar ul li a:hover{
     color: #e8e023;
@@ -111,23 +127,113 @@ body{
     transform: scale(1.1);
 }
 /* responsiveness */
-@media (max-width: 768px){
-    body{
+/* ----------- Large Tablets (max 1024px) ----------- */
+@media (max-width: 1024px) {
+    .food {
+        padding: 0 40px;
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .menu li a {
+        font-size: 2.8rem;
+    }
+
+    .contact-info {
+        margin-top: 80px;
+        padding-left: 20px;
+    }
+}
+
+/* ----------- Tablets (max 768px) ----------- */
+@media (max-width: 768px) {
+    .food {
+        flex-direction: column; /* Stack sidebar + contact */
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        height: auto;
+    }
+
+    .container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        gap: 40px;
     }
-    .container{
-        flex-direction: column;
+
+    .sidebar ul {
         text-align: center;
     }
-    .contact-info{
-        border: none;
-        margin-top: 40px;
+
+    .menu li a {
+        font-size: 2.4rem;
+    }
+
+    .contact-info {
+        border-left: none;
+        margin-top: 20px;
+        padding-left: 0;
         text-align: center;
     }
-    .sidebar ul li a{
-        font-size: 1.5rem;
+
+    .social-icons {
+        justify-content: center;
     }
 }
+
+/* ----------- Mobile (max 600px) ----------- */
+@media (max-width: 600px) {
+
+    .food {
+        padding: 20px;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .submenu {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .submenu li a {
+        font-size: 0.9rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+/* ---------- Small Mobile (max 420px) ----------- */
+@media (max-width: 420px) {
+    .menu li a {
+        font-size: 1.8rem;
+    }
+
+    .food {
+        padding: 15px;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+
+    .social-icons {
+        gap: 12px;
+    }
+}
+
